@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/cr.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <span class="dtulogo">
+                <img src="/photos/dtulogo.png" alt="" srcset="">
+                <span style="font-size: 4vh; position:fixed; top:2.5vh;height: 100%; width: auto;"> Delhi Technological
+                    University </span>
+            </span>
+            <span style="position: fixed;top:3.5vh;font-size:3vh;right:5vw;">
+            <img style="height: 5vh;" src="/photos/logout.png" alt="" srcset="">
+            <span style="position: fixed;top:3.5vh;font-size:3vh;right:10vw;">
+                
+                <%=student.name%>
+            </span>
+        </span>
+
+        </div>
+
+        <span class="left">
+
+            Core Subjects Available -> <br>
+
+            <%for(let branch of branches){%>
+
+                <%if(student.branch.equals(branch._id)) { %>
+                    <%for(let subject of branch.subjects){%>
+                        <%=subject.subjectName%>
+                            <br>
+
+                            <%}}}%>
+        </span>
+        <span class="right"></span>
+
+
+
+
+        <div class="footer">
+
+        </div>
+
+
+    </div>
+</body>
+
+</html>
